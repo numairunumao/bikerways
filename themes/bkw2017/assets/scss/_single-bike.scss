@@ -1,9 +1,31 @@
 .table-single-bike {
-	tr td {
-		padding: 3px 15px;
+	thead {
+		background: #ccc;
+	}
 
-		label {
-			margin: 0;
+	tbody {
+
+
+
+		tr {
+
+			&:hover {
+				background: #dcdcdc;
+			}
+			td {
+			padding: 3px 15px;
+
+			label {
+				margin: 0;
+			}
 		}
-	}	
+	}
+
+	}
+
+	
+
+
+
 }
+
