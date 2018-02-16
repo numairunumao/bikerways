@@ -1,0 +1,30 @@
+// Header section
+header {
+    margin-bottom: 15px;
+}
+
+.logo-main {
+    width: 130px;
+    margin-top: 5px;
+}
+
+#menu-header {
+    margin: 25px 0;
+}
+
+.navbar {
+    li {
+        display: inline-block;
+        padding: 0 18px;
+
+        a {
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+}
+
+.top-menu {
+    background-color: #232323;
+    padding: 15px;
+}

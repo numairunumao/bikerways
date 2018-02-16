@@ -1,0 +1,18 @@
+<div ng-repeat="post in filterPostsTemplate.posts">
+    <div class="grid-prd">
+        <div class="prd-detail">
+            <img class="prd-feature-image" src="{{post.featuredImageFull}}">
+            <a href="{{post.permalink}}">
+                <div ng-bind-html="post.title.long"></div>
+            </a>
+            <p><strong>OS:</strong> {{post.customFields.os__pxid_xoyxkuugzfpjiiy_0.value }}</p>
+            <p><strong>CPU:</strong> {{post.customFields.cpu__pxid_bnyzgrlubqmksny_1.value }}</p>
+            <p><strong>RAM:</strong> {{post.customFields.ram__pxid_skfrqslwvymcmsb_2.value }}</p>
+            <p><strong>GPU:</strong> {{post.customFields.gpu__pxid_osfgxfiwhqwhqcw_3.value }}</p>
+            <p><strong>ROM:</strong> {{post.customFields.rom__pxid_qphapzjspkmghxq_2.value }}</p>
+            <p><strong>Display Size:</strong> {{post.customFields.display_size__pxid_ukblsnshdhrwbrm_3.value }} inch</p>
+            <p><strong>ราคา:</strong> {{post.customFields.price__pxid_asicpnlwmonxyoo_0.value }} บาท</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
