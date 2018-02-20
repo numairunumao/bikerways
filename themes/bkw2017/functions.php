@@ -80,6 +80,9 @@ function create_post_type() {
     );
 }
 
+
+include "shortcode/calculate.php";
+
 ?>
 
 

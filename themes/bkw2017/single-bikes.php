@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div class="container">
-
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php echo the_content(); ?>
 	<?php endwhile; else: ?>
@@ -32,7 +31,6 @@
 				<td>ลงข้อมูลเมื่อวันที่</td>
 				<td><?php the_field('bike_date_update'); ?></td>
 			</tr>
-			
 		</tbody>
 	</table>
 	
@@ -59,7 +57,6 @@
 				<td>แรงม้า</td>
 				<td><?php the_field('bike_horse_power'); ?></td>
 			</tr>
-			
 			<tr>
 				<td>ปริมาตรกระบอกสูบ</td>
 				<td><?php the_field('bike_real_cc'); ?></td>
@@ -131,6 +128,10 @@
 				<td><?php echo do_shortcode('[lscf_customfield custom_field_id="abs__pxid_glurmzxqognmlyf_3"]') ?></td>
 			</tr>
 			<tr>
+				<td>ชนิดของล้อ</td>
+				<td><?php the_field('bike_wheel_tylpe'); ?></td>
+			</tr>
+			<tr>
 				<td>ระบบกันสะเทือน ล้อหน้า</td>
 				<td><?php the_field('bike_front_shock_up'); ?></td>
 			</tr>
@@ -167,11 +168,9 @@
 				<td>ระบบเบรคหลัง</td>
 				<td><?php the_field('bike_back_break'); ?></td>
 			</tr>
-			<tr>
-				<td>ชนิดของล้อ</td>
-				<td><?php the_field('bike_wheel_tylpe'); ?></td>
-			</tr>		
 		</tbody>
 	</table>
+	<?php echo do_shortcode('[calculate-shortcode]') ?>
+	
 </div>
 <?php get_footer();?>

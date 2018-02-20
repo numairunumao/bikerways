@@ -1,31 +1,48 @@
 .table-single-bike {
-	thead {
-		background: #ccc;
-	}
+    width: 100%;
 
-	tbody {
+    &.table-cal {
+        .form-control {
+            padding: 0px 5px;
+            margin: 3px 0;
+        }
+    }
 
+    thead {
+        background: #ccc;
+    }
 
+    tfoot {
+        button {
+            border: 1px solid #ccc;
+            padding: 0px 22px;
 
-		tr {
+            &:hover {
+            	background-color: #ccc;
+            }
+        }
+    }
 
-			&:hover {
-				background: #dcdcdc;
-			}
-			td {
-			padding: 3px 15px;
+    tbody {
 
-			label {
-				margin: 0;
-			}
-		}
-	}
+        tr {
 
-	}
+            &:hover {
+                background: #dcdcdc;
+            }
 
-	
+            td {
 
+                &:first-child {
+                    width: 30%;
+                }
 
+                padding: 3px 15px;
 
+                label {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
-
