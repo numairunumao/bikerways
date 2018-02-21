@@ -17,6 +17,15 @@ function plugin_myContentFilter($content){
     return substr($content, 0, 300);
 }
 
+// The excerpt title
+add_filter( 'the_title', 'wpse_75691_trim_words' );
+function wpse_75691_trim_words( $title )
+{
+    // limit to ten words
+    return wp_trim_words( $title, 7, '' );
+}
+
+
 function techxspecs_setup() {
     load_theme_textdomain( 'techxspecs' );
     add_editor_style();
