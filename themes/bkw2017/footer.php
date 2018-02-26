@@ -7,10 +7,10 @@
         </div>
     </div>
 </footer>
-</div><!-- #page -->
 
+</body><!-- End Body -->
+</html><!-- End html -->
 <?php wp_footer(); ?>
-</body>
-</html>
+
 
 

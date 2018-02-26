@@ -1,11 +1,26 @@
 <?php get_header(); ?>
 <div class="container">
+	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php echo the_content(); ?>
 	<?php endwhile; else: ?>
 	<?php echo "No Content Found"; ?>
 	<?php endif; ?>
 
+	<div class="owl-content">
+		<?php $images = get_field('bike_gal');
+		if( $images ): ?>
+		<div class="owl-carousel">
+			<?php foreach( $images as $image ): ?>
+			
+			<div class="item">
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<?php endif; ?>
+	</div>
+	
 	<div class="single-bike-content">
 		<table class="table-single-bike table">
 			<thead>
@@ -49,10 +64,6 @@
 				<tr>
 					<td>จำนวนสูบ</td>
 					<td><?php echo do_shortcode('[lscf_customfield custom_field_id="จำนวนสูบ__pxid_xsvcyjgxmsvklxw_1"]') ?></td>
-				</tr>
-				<tr>
-					<td>กระบอกสูบ</td>
-					<td><?php echo do_shortcode('[lscf_customfield custom_field_id="cc__pxid_xptgvaigzholynp_1"]') ?></td>
 				</tr>
 				<tr>
 					<td>แรงม้า</td>
@@ -173,6 +184,6 @@
 		</table>
 		<?php echo do_shortcode('[calculate-shortcode]') ?>
 	</div>
-	<div class="side-bar"></div>
+	
 </div>
 <?php get_footer();?>

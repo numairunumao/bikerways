@@ -1,10 +1,19 @@
-// .single-bike-content {
-//     width: 70%;
-// }
+.owl-content {
+    .owl-carousel {
 
-// .side-bar {
-//     width: 30%;
-// }
+        .item {
+            img {
+                height: auto;
+            }
+        }
+
+        .owl-thumbs {
+            button.owl-thumb-item {
+                outline: 0;
+            }
+        }
+    }
+}
 
 .table-single-bike {
     width: 100%;
@@ -13,6 +22,10 @@
         .form-control {
             padding: 0px 5px;
             margin: 3px 0;
+        }
+
+        td {
+            border: none !important;
         }
     }
 

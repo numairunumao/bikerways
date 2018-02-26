@@ -5,33 +5,45 @@ ob_start();
 <table class="table-single-bike table table-cal">
 	<thead>
 		<tr>
-			<td colspan="2">คำนวนค่างวด</td>
+			<td colspan="3">คำนวนค่างวด</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
+
+
 			<td>ราคารถ</td>
-			<td><input class="form-control" type="text" id="amount" name="amount" placeholder="ราคารถ" required></td>
+			<td>
+				<input class="form-control" value="<?php echo lscf_get_custom_fields( 'ราคา__pxid_zmxaxwovkxzkkzc_0' ); ?>" type="text" id="amount" name="amount" placeholder="ราคารถ" readonly>
+			</td>
+			<td>บาท</td>
 		</tr>
 		<tr>
 			<td>ราคาดาวน์ (บาท)</td>
 			<td><input class="form-control" type="text" id="down" placeholder="ราคาดาวน์"></td>
+			<td>บาท</td>
 		</tr>
 		<tr>
 			<td>ราคาดาวน์ %</td>
-			<td><input class="form-control" type="text" id="downpercent" placeholder="ราคาดาวน์"></td>
+			<td>
+				<input class="form-control" type="text" id="downpercent" placeholder="ราคาดาวน์">
+			</td>
+			<td>เปอเซนต์</td>
 		</tr>
 		<tr>
 			<td>จำนวนเดือน</td>
 			<td><input class="form-control" type="text" id="months" placeholder="จำนวนเดือน"></td>
+			<td>เดือน</td>
 		</tr>
 		<tr>
 			<td>จำนวนปี</td>
 			<td><input class="form-control" type="text" id="years" placeholder="จำนวนปี"></td>
+			<td>ปี</td>
 		</tr>
 		<tr>
 			<td>ดอกเบี้ย</td>
 			<td><input class="form-control" type="text" id="interest" placeholder="ดอกเบี้ย"></td>
+			<td>เปอเซนต์</td>
 		</tr>
 	</tbody>
 	<tfoot>
