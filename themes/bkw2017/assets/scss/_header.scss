@@ -1,11 +1,19 @@
 // Header section
 header {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+header.top-bar-mobile {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .logo-main {
     width: 130px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #menu-header {
@@ -26,5 +34,5 @@ header {
 
 .top-menu {
     background-color: #232323;
-    padding: 15px;
+    padding: 0px;
 }

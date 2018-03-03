@@ -7,7 +7,6 @@
 @import "page-travel";
 
 html {
-    height: 100%;
     box-sizing: border-box;
 }
 
@@ -17,6 +16,8 @@ body {
     padding-bottom: 6rem;
     min-height: 100%;
     font-family: 'Kanit', sans-serif;
+    background: #dcdcdc;
+    
 }
 
 // Body section
@@ -34,7 +35,11 @@ h1.entry-title {
     }
 
     body, html {
-        height: 100%;
+
+        // height: 100%;
+        max-height: 100%;
+        min-height: 100vh;
+
     }
 
     img {

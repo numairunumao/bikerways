@@ -1,6 +1,9 @@
 footer {
 
-   .footer-top {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    .footer-top {
         background-color: #414042;
         padding-top: 50px;
         padding-bottom: 50px;
@@ -27,8 +30,8 @@ footer {
 
         input[placeholder], [placeholder], *[placeholder] {
           font-style: italic;
-        }
-    }
+      }
+  }
 }
 
 .footer-bottom {

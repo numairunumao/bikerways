@@ -6,25 +6,58 @@ Template Name: Cal
 
 <?php get_header(); ?>
 
-<div class="container">
-	<div class="calc">
-		<label>ราคารถ</label>
-		<input class="form-control" type="text" id="amount" name="amount" placeholder="ราคารถ" required><br>
-		<label>ราคาดาวน์ (บาท)</label>
-		<input class="form-control" type="text" id="down" placeholder="ราคาดาวน์"><br>
-		<label>ราคาดาวน์ %</label>
-		<input class="form-control" type="text" id="downpercent" placeholder="ราคาดาวน์"><br>
-		<label>จำนวนเดือน</label>
-		<input class="form-control" type="text" id="months" placeholder="จำนวนเดือน"><br>
-		<label>จำนวนปี</label>
-		<input class="form-control" type="text" id="years" placeholder="จำนวนปี"><br>
-		<label>ดอกเบี้ย</label>
-		<input class="form-control" type="text" id="interest" placeholder="ดอกเบี้ย"><br>
-		<button class="btn" onclick="myFunction()">Calculate</button>
-		<p>เดือนละ</p><p id="output"></p>
-	</div>
-	<script type="text/javascript">
-		 function myFunction() {
+<div class="right-side container">
+	<table class="table-single-bike table table-cal">
+        <thead>
+            <tr>
+                <td colspan="3">คำนวนค่างวด</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ราคารถ</td>
+                <td>
+                    <input class="form-control" type="text" id="amount" name="amount" placeholder="ราคารถ">
+                </td>
+                <td>บาท</td>
+            </tr>
+            <tr>
+                <td>ราคาดาวน์ (บาท)</td>
+                <td><input class="form-control" type="text" id="down" placeholder="ราคาดาวน์"></td>
+                <td>บาท</td>
+            </tr>
+            <tr>
+                <td>ราคาดาวน์ %</td>
+                <td>
+                    <input class="form-control" type="text" id="downpercent" placeholder="ราคาดาวน์">
+                </td>
+                <td>เปอเซนต์</td>
+            </tr>
+            <tr>
+                <td>จำนวนเดือน</td>
+                <td><input class="form-control" type="text" id="months" placeholder="จำนวนเดือน"></td>
+                <td>เดือน</td>
+            </tr>
+            <tr>
+                <td>จำนวนปี</td>
+                <td><input class="form-control" type="text" id="years" placeholder="จำนวนปี"></td>
+                <td>ปี</td>
+            </tr>
+            <tr>
+                <td>ดอกเบี้ย</td>
+                <td><input class="form-control" type="text" id="interest" placeholder="ดอกเบี้ย"></td>
+                <td>เปอเซนต์</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><button class="btn" onclick="myFunctionCal()">คำนวน</button></td>
+                <td><span id="output"></span></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script type="text/javascript">
+       function myFunction() {
         var loan = jQuery('#amount').val(),
         month = jQuery('#months').val(),
         int = jQuery('#interest').val(),
@@ -44,7 +77,7 @@ Template Name: Cal
         }
 
         // กรอกที่ช่อง Month
-       jQuery(function(){
+        jQuery(function(){
             var month = jQuery(this).val(),
             doneTypingInterval = 500,
             months = parseInt(month),
@@ -132,7 +165,7 @@ Template Name: Cal
                 jQuery('#down').val((percent / 100) * amount);  
             }
         })
-	</script>
+    </script>
 </div>
 
 <?php get_footer(); ?>

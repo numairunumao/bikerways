@@ -1,29 +1,27 @@
-.page-travel-content {
+.page-travel-content, .page-news-content {
+
+	.col-md-4, .col-lg-4 {
+		margin-bottom: 30px;
+	}
+
 	.travel-card {
-		height: 470px;
+		position: relative;
+		height: auto;
 		img.card-img-top {
 			max-width: 100%;
-			min-height: 250px;
+			min-height: 175px;
 		}
 
 		.card-body {
+
+			padding: 15px;
+
 			.card-title {
-				font-size: 20px;
+				font-size: 15px;
 			}
 
 			p {
 				font-size: 16px;
-			}
-
-			.read-more {
-				border: 1px solid #ccc;
-				padding: 5px 15px;
-				border-radius: 3px;
-				&:hover {
-					background-color: #000;
-					color: #fff;
-					text-decoration: none;
-				}
 			}
 		}
 	}
